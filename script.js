@@ -1,16 +1,33 @@
+// window.onload = function() {
+//     const bar = document.getElementById("bar");
+//     const close = document.getElementById("close");
+//     const nav = document.getElementById("navbar");
 
-$(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+//     if (bar) {
+//         bar.addEventListener("click", () => {
+//             nav.classList.add("active");
+//         });
+//     }
 
-    $(document).ready(function(){
-        $('.carousel').carousel();
-    });
+//     if (close) {
+//         close.addEventListener("click", () => {
+//             nav.classList.remove("active");
+//         });
+//     }
+// };
 
-    $(document).ready(function(){
-        $('.parallax').parallax();
-    });
-
-    $(document).ready(function(){
-        $('.collapsible').collapsible();
-    });
+window.onload = function () {
+    const bar = document.getElementById("bar");
+    const close = document.getElementById("close");
+    const nav = document.getElementById("navbar");
+  
+    if (bar && close && nav) {
+      bar.addEventListener("click", () => {
+        nav.classList.add("active");
+      });
+  
+      close.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    }
+  };
